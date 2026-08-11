@@ -1,0 +1,734 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="theme-color" content="#241f1b">
+
+    <title>Hearth & Crumb | Freshly Baked Every Day</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        FRESHLY BAKED EVERY DAY
+        <span>•</span>
+        SAME-DAY LOCAL DELIVERY
+    </div>
+
+
+    <!-- HEADER -->
+    <header>
+
+        <a class="logo" href="#home">
+            HEARTH<span>✦</span>CRUMB
+        </a>
+
+        <button class="menu" aria-label="Open menu" aria-expanded="false">
+            <i></i>
+            <i></i>
+        </button>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Menu</a>
+            <a href="#offers">Offers</a>
+            <a href="#about">Our story</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-tools">
+
+            <button class="search-toggle" aria-label="Search">
+                ⌕
+            </button>
+
+            <a href="https://wa.me/918709675567" target="_blank">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+
+        <a href="#home">Home</a>
+        <a href="#shop">Bakery menu</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">Our story</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+
+            <div>
+
+                <p class="kicker">
+                    Fresh from the oven
+                </p>
+
+                <h1>
+                    Baked with love,
+                    <br>
+                    <em>made for sharing.</em>
+                </h1>
+
+                <p>
+                    Fresh breads, celebration cakes and irresistible pastries,
+                    baked in small batches with simple ingredients.
+                </p>
+
+                <a class="btn light" href="#shop">
+                    Explore our menu
+                    <b>→</b>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- BENEFITS -->
+        <section class="benefits">
+
+            <div>
+                <b>✦</b>
+
+                <span>
+                    <strong>Fresh every morning</strong>
+                    Small-batch baking for better flavour and texture.
+                </span>
+            </div>
+
+
+            <div>
+                <b>↗</b>
+
+                <span>
+                    <strong>Made with care</strong>
+                    Thoughtful ingredients and recipes made in-house.
+                </span>
+            </div>
+
+
+            <div>
+                <b>♡</b>
+
+                <span>
+                    <strong>Easy ordering</strong>
+                    Message us on WhatsApp for quick enquiries.
+                </span>
+            </div>
+
+        </section>
+
+
+        <!-- OFFERS -->
+        <section class="featured" id="offers">
+
+            <div class="section-label">
+
+                <p class="kicker">
+                    A little extra
+                </p>
+
+                <h2>
+                    Offers worth
+                    <em>tasting</em>
+                </h2>
+
+            </div>
+
+
+            <div class="offer-grid">
+
+                <article class="offer one">
+
+                    <p>
+                        New customer offer
+                    </p>
+
+                    <h3>
+                        10% off
+                        <br>
+                        your first order
+                    </h3>
+
+                    <code>
+                        WELCOME10
+                    </code>
+
+                </article>
+
+
+                <article class="offer two">
+
+                    <p>
+                        Family treat
+                    </p>
+
+                    <h3>
+                        Buy 2 cakes,
+                        <br>
+                        get 10% off
+                    </h3>
+
+                    <a href="#shop">
+                        Explore cakes →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SHOP / MENU -->
+        <section class="shop-section" id="shop">
+
+            <div class="section-top">
+
+                <div>
+
+                    <p class="kicker">
+                        Our menu
+                    </p>
+
+                    <h2>
+                        Find your next favourite
+                    </h2>
+
+                </div>
+
+                <button class="admin-open">
+                    + Add a product
+                </button>
+
+            </div>
+
+
+            <!-- FILTERS -->
+            <div class="filters">
+
+                <button class="filter active" data-category="All">
+                    All
+                </button>
+
+                <button class="filter" data-category="Cakes">
+                    Cakes
+                </button>
+
+                <button class="filter" data-category="Pastries">
+                    Pastries
+                </button>
+
+                <button class="filter" data-category="Breads">
+                    Breads
+                </button>
+
+                <button class="filter" data-category="Cookies">
+                    Cookies
+                </button>
+
+
+                <label class="searchbox">
+
+                    <span>⌕</span>
+
+                    <input
+                        id="search"
+                        placeholder="Search bakery menu">
+
+                </label>
+
+            </div>
+
+
+            <p class="result-count" id="result-count"></p>
+
+
+            <!-- PRODUCTS GENERATED BY JAVASCRIPT -->
+            <div
+                class="product-grid"
+                id="products">
+            </div>
+
+
+            <button
+                class="load-more"
+                id="load-more">
+
+                Show more treats
+
+            </button>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+
+            <div class="about-image"></div>
+
+
+            <div class="about-copy">
+
+                <p class="kicker">
+                    Our story
+                </p>
+
+                <h2>
+                    Good baking should feel
+                    <em>personal.</em>
+                </h2>
+
+
+                <p>
+                    Hearth & Crumb is built around a simple idea:
+                    everyday treats deserve the same care as special-occasion
+                    cakes.
+
+                    We bake in small batches so every loaf, pastry and cake
+                    feels fresh when it reaches you.
+                </p>
+
+
+                <ul>
+
+                    <li>
+                        ✓ Freshly baked in small batches
+                    </li>
+
+                    <li>
+                        ✓ Quality ingredients
+                    </li>
+
+                    <li>
+                        ✓ Made for local families and celebrations
+                    </li>
+
+                </ul>
+
+
+                <a
+                    href="#contact"
+                    class="text-link">
+
+                    Get to know us →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- REVIEWS -->
+        <section class="reviews">
+
+            <p class="kicker">
+                Loved by our customers
+            </p>
+
+            <h2>
+                What people say
+            </h2>
+
+
+            <div class="review-grid">
+
+                <blockquote>
+
+                    “The cake was soft, fresh and beautifully finished.
+                    Everyone at the party loved it.”
+
+                    <footer>
+
+                        <b>
+                            — Priya S.
+                        </b>
+
+                        <span>
+                            Happy customer
+                        </span>
+
+                    </footer>
+
+                </blockquote>
+
+
+                <blockquote>
+
+                    “Their croissants are so fresh in the morning.
+                    I keep coming back for them.”
+
+                    <footer>
+
+                        <b>
+                            — Rahul K.
+                        </b>
+
+                        <span>
+                            Regular customer
+                        </span>
+
+                    </footer>
+
+                </blockquote>
+
+
+                <blockquote>
+
+                    “Ordering on WhatsApp was simple and the pickup
+                    was ready exactly on time.”
+
+                    <footer>
+
+                        <b>
+                            — Ananya R.
+                        </b>
+
+                        <span>
+                            Happy customer
+                        </span>
+
+                    </footer>
+
+                </blockquote>
+
+            </div>
+
+        </section>
+
+
+        <!-- VISIT -->
+        <section class="visit" id="contact">
+
+            <div>
+
+                <p class="kicker">
+                    Come say hello
+                </p>
+
+                <h2>
+                    Visit our bakery
+                </h2>
+
+
+                <p>
+                    YOUR SHOP ADDRESS
+                    <br>
+                    YOUR CITY, STATE — PINCODE
+                </p>
+
+
+                <p>
+                    Mon–Sat: 8am – 8pm
+                    <br>
+                    Sunday: 9am – 6pm
+                </p>
+
+
+                <a
+                    class="text-link"
+                    href="tel:+918709675567">
+
+                    Call +91 87096 75567 →
+
+                </a>
+
+            </div>
+
+
+            <div class="map">
+
+                <iframe
+                    title="Bakery location"
+                    src="https://www.google.com/maps?q=Park%20Street%20Kolkata&output=embed"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="contact">
+
+            <div>
+
+                <p class="kicker">
+                    Need some help?
+                </p>
+
+                <h2>
+                    Let's talk.
+                </h2>
+
+                <p>
+                    Tell us what you would like to order.
+                    You can also use WhatsApp for faster
+                    product enquiries.
+                </p>
+
+            </div>
+
+
+            <form id="contact-form">
+
+                <input
+                    required
+                    name="name"
+                    placeholder="Your name">
+
+
+                <input
+                    required
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone number">
+
+
+                <textarea
+                    required
+                    name="message"
+                    placeholder="What would you like to order?">
+                </textarea>
+
+
+                <button
+                    class="btn dark"
+                    type="submit">
+
+                    Send enquiry
+                    <b>→</b>
+
+                </button>
+
+
+                <p class="form-message"></p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- FLOATING WHATSAPP -->
+    <a
+        class="whatsapp"
+        target="_blank"
+        href="https://wa.me/918709675567?text=Hi%20Hearth%20%26%20Crumb%2C%20I%20would%20like%20to%20order.">
+
+        ◔
+        <span>
+            Chat with us
+        </span>
+
+    </a>
+
+
+    <!-- ADD PRODUCT MODAL -->
+    <div
+        class="modal"
+        id="modal">
+
+        <div class="modal-card">
+
+            <button
+                class="modal-close"
+                aria-label="Close">
+
+                ×
+
+            </button>
+
+
+            <p class="kicker">
+                Bakery manager
+            </p>
+
+
+            <h2>
+                Add a new product
+            </h2>
+
+
+            <form id="product-form">
+
+                <input
+                    required
+                    name="name"
+                    placeholder="Product name">
+
+
+                <select name="category">
+
+                    <option>
+                        Cakes
+                    </option>
+
+                    <option>
+                        Pastries
+                    </option>
+
+                    <option>
+                        Breads
+                    </option>
+
+                    <option>
+                        Cookies
+                    </option>
+
+                </select>
+
+
+                <input
+                    required
+                    type="number"
+                    name="price"
+                    placeholder="Price in ₹">
+
+
+                <input
+                    name="image"
+                    placeholder="Photo URL (optional)">
+
+
+                <textarea
+                    name="description"
+                    placeholder="Short product description">
+                </textarea>
+
+
+                <button
+                    class="btn dark">
+
+                    Save product
+
+                </button>
+
+            </form>
+
+
+            <small>
+                New products are saved only in this browser
+                for easy demo updates.
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div>
+
+            <a class="logo" href="#home">
+                HEARTH<span>✦</span>CRUMB
+            </a>
+
+            <p>
+                Fresh baking, made personal.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <b>
+                Menu
+            </b>
+
+            <a href="#shop">
+                Cakes
+            </a>
+
+            <a href="#shop">
+                Pastries
+            </a>
+
+            <a href="#shop">
+                Breads
+            </a>
+
+            <a href="#offers">
+                Offers
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <b>
+                Follow along
+            </b>
+
+            <a
+                href="https://instagram.com"
+                target="_blank">
+
+                Instagram ↗
+
+            </a>
+
+            <a
+                href="https://facebook.com"
+                target="_blank">
+
+                Facebook ↗
+
+            </a>
+
+            <a href="mailto:hello@yourbakery.com">
+
+                hello@yourbakery.com
+
+            </a>
+
+        </div>
+
+
+        <small>
+
+            © 2026 HEARTH & CRUMB.
+            ALL RIGHTS RESERVED.
+
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
