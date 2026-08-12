@@ -452,7 +452,7 @@ nav a:hover,
 .about-image {
     background:
         linear-gradient(rgba(68, 39, 21, .08), rgba(68, 39, 21, .08)),
-        url("bakery-about-image.png") center/cover
+        url("backery-about-image.png") center/cover
 }
 
 .about-copy {
